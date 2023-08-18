@@ -1,0 +1,27 @@
+/*
+    Name: Electronic First 
+    Authro: Niran
+    URL:
+    Description: A Practice Project for skill testing
+    version: 1.0.0
+*/
+
+// Fonst style
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Background Colors*/
+$bg: #272727;
+$black: #000000;
+$white: #ffffff;
+$dark: #141414;
+$text-color: #d0d0d0;
+$basic-color: #ee5913;
+$secondary: #17a8fc;
+$font-family: 'Poppins', sans-serif;
+
+
+/* BASE base styles, variables, mixins ect. */
+@import 'mixing';
+@import 'default';
+@import 'header';
+@import 'banner';

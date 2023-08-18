@@ -1,0 +1,69 @@
+//  Header and top bar style
+#header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    .header-top {
+        max-width: 1560px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo {
+            width: 120px;
+            display: inline-block;
+        }
+
+        .top-menu__min {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 15px;
+
+                li {
+                    display: inline;
+
+                    &.active,
+                    &:hover {
+                        a {
+                            color: $basic-color;
+                        }
+                    }
+                }
+            }
+        }
+        .left-menu {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 15px;
+
+                li {
+                    display: inline;
+                    a {
+                        .icon {
+                            font-size: 20px;
+                        }
+                    }
+                    &.active,
+                    &:hover {
+                        a {
+                            .icon {
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

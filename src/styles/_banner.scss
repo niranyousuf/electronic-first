@@ -1,0 +1,133 @@
+// Banner section style
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+
+    .banner__content {
+        padding: 250px 0;
+        max-width: 520px;
+        position: relative;
+
+        .tag {
+            font-size: 12px;
+            color: $white;
+            background-color: rgba($bg, 1);
+            display: inline-block;
+            padding: 4px 9px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        .amount {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+
+            .discount {
+                font-size: 16px;
+                color: $white;
+                background-color: $basic-color;
+                padding: 5px 10px;
+                font-weight: 600;
+                border-radius: 3px 0 0 3px;
+                z-index: 1;
+                position: relative;
+                padding-right: 0px;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 28px;
+                    border-radius: 0 3px 3px 0;
+                    background-color: $basic-color;
+                    top: 0;
+                    right: -10px;
+                    transform: skew(15deg);
+                    z-index: -2;
+                }
+            }
+
+            .base-price {
+                font-size: clamp(2rem, 3.5vw, 3.3125rem);
+                color: $white;
+            }
+        }
+
+        .cta-hero {
+            position: absolute;
+            left: 45vw;
+            display: block;
+            bottom: 30%;
+            width: 100%;
+            a {
+                display: inline;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: rgba($bg, 0.2);
+                padding: 8px 24px;
+                letter-spacing: 2px;
+                position: relative;
+                text-transform: uppercase;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 3px;
+                    top: 0;
+                    background: transparent;
+                    background: linear-gradient(180deg, $white 10px, transparent 10px calc(100% - 10px), $white 10px);
+                }
+
+                &::after {
+                    right: -3px;
+                }
+                &::before {
+                    left: -3px;
+                }
+
+                > span {
+                    position: absolute;
+                    width: calc(100% + 6px);
+                    height: 100%;
+                    left: -3px;
+                    top: 0;
+                    background-color: transparent;
+                    transition: all 200ms ease;
+
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        height: 3px;
+                        width: 100%;
+                        right: 0;
+                        background: transparent;
+                        background: linear-gradient(
+                            90deg,
+                            $white 12px,
+                            transparent 12px calc(100% - 12px),
+                            $white 12px
+                        );
+                    }
+
+                    &::after {
+                        top: -3px;
+                    }
+                    &::before {
+                        bottom: -3px;
+                    }
+                }
+
+                &:hover {
+                    padding: 10px 26px;
+                    color: $basic-color;
+                }
+            }
+        }
+    }
+}
