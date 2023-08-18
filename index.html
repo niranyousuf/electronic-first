@@ -11,13 +11,13 @@
 </head>
 
 <body>
-
+<span class="layer"></span>
     <!-- Menu and top heder -->
     <header id="header">
 
         <div class="header-top">
 
-            <a class="logo" href="#">
+            <a href="#" class="logo" href="#">
                 <img src="./assets/img/logo.webp" alt="Electronic first">
             </a>
 
@@ -40,13 +40,91 @@
         </div>
 
         <nav class="main-nav">
-            <ul>
-                <li><a href="#"><span class="icon icon-desktop"></span> PC</a></li>
+            <input type="text">
+            <ul class="mainmenu">
+                <li class="drop-menu" aria-expanded="false">
+                    <a href="#"><span class="icon icon-desktop"></span> PC</a>
+
+                    <div class="megamenu" data-visible="false">
+                        <div class="title">
+                            <p>Platforms</p>
+                            <a href="#"> View all</a>
+                        </div>
+                        <div class="item-list">
+                            <a href="#" class="item">
+                                <span class="icon icon-duckduckgo"></span>
+                                Duckduckgo
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-ebay"></span>
+                                Ebay
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-foursquare"></span>
+                                Foursquare
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-w3c"></span>
+                                W3 School
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-intensedebate"></span>
+                                Intensedebate
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-windows"></span>
+                                Windows
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-youku"></span>
+                                Youku
+                            </a>
+                            
+                            <a href="#" class="item">
+                                <span class="icon icon-youtube"></span>
+                                Youtube
+                            </a>
+                        </div>
+
+                        
+                        <div class="title">
+                            <p>Prepaid card</p>
+                            <a href="#"> View all</a>
+                        </div>
+                        <div class="cards-list">
+                            <a href="#" class="card-block">
+                                <img src="./assets/img/steam.svg" alt="logo">
+                                <p>Stream Gift card</p>
+                            </a>
+                            <a href="#" class="card-block">
+                                <img src="./assets/img/amazon.svg" alt="logo">
+                                <p>Amazon Gift card</p>
+                            </a>
+                            <a href="#" class="card-block">
+                                <img src="./assets/img/blizzard.svg" alt="logo">
+                                <p>Blizzard Gift card</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </li>
                 <li><a href="#"><span class="icon icon-intensedebate"></span> Playstation</a></li>
+                <li><a href="#"><span class="icon icon-amazon"></span> Amazon</a></li>
+                <li><a href="#"><span class="icon icon-ebay"></span> Ebay</a></li>
+                <li><a href="#"><span class="icon icon-search"></span>
+                </a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero section -->
     <section class="banner" style="background-image: url(./assets/img/game.jpg);">
         <div class="container">
             <div class="banner__content">
@@ -61,6 +139,60 @@
                     <a href="#">+ Early Access <span></span></a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Products section -->
+    <section id="products">
+        <div class="container">
+            <div class="title">
+                <h2>Trending</h2>
+                <a href="#" class="btn">View all</a>
+            </div>
+
+            <div class="products-list">
+
+                <div class="product-card">
+                    <a href="#">
+                        <div class="card-header">
+                            <img src="./assets/img/code.jpg" alt="Image">
+                            <p class="discount"> -25%</p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p>Sengoku Dynasty</p>
+                        <p class="price">19.99&euro;</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="#">
+                        <div class="card-header">
+                            <img src="./assets/img/desk.png" alt="Image">
+                            <p class="discount"> -25%</p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p><span class="badge">DLC</span> Sengoku Dynasty</p>
+                        <p class="price">19.99&euro;</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="#">
+                        <div class="card-header">
+                            <img src="./assets/img/desktop.jpg" alt="Image">
+                            <p class="discount"> -25%</p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p>Sengoku Dynasty</p>
+                        <p class="price">19.99&euro;</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 

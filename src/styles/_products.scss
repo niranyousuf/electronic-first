@@ -1,0 +1,104 @@
+// Products section style
+#products {
+    padding: 32px 0;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .btn {
+            background-color: rgba($white, 0.075);
+            padding: 5px 12px;
+            border-radius: 4px;
+            border: 1px solid rgba($white, 0.55);
+
+            &:hover {
+                border: 1px solid rgba($basic-color, 0.55);
+                color: $basic-color;
+            }
+        }
+    }
+
+    .products-list {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .product-card {
+            max-width: 424px;
+            width: 100%;
+
+            @include desktop-lg {
+                max-width: 370px;
+            }
+
+            .card-header {
+                position: relative;
+                width: 100%;
+                height: 244px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 3px;
+                }
+
+                .discount {
+                    font-size: 16px;
+                    color: $white;
+                    background-color: $basic-color;
+                    padding: 5px 10px;
+                    font-weight: 600;
+                    border-radius: 3px 0 0 3px;
+                    z-index: 1;
+                    position: absolute;
+                    padding-right: 0px;
+                    left: 0;
+                    bottom: 0;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        height: 100%;
+                        width: 28px;
+                        border-radius: 0 3px 3px 0;
+                        background-color: $basic-color;
+                        top: 0;
+                        right: -10px;
+                        transform: skew(15deg);
+                        z-index: -2;
+                    }
+                }
+            }
+
+            .card-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+                p {
+                    font-size: 14px;
+
+                    &.price {
+                        font-size: 18px;
+                    }
+
+                    .badge {
+                        font-size: 12px;
+                        color: rgba($white, 0.5);
+                        padding: 1px 4px;
+                        border: 0.5px solid rgba($white, 0.075);
+                        text-transform: uppercase;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
