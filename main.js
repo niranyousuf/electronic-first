@@ -15,18 +15,43 @@ window.addEventListener("resize", adjustHeaderMargin);
 window.addEventListener("orientationchange", adjustHeaderMargin);
 
 // Mobile menu
-// const primaryNav = document.querySelector('.main_menu');
-// const navToggle = document.querySelector('.navbar-toggler');
-// navToggle.addEventListener('click', () => {
-//     const visibility = primaryNav.getAttribute('data-visible');
-//     if (visibility === 'false') {
-//         primaryNav.setAttribute('data-visible', true);
-//         navToggle.setAttribute('aria-expanded', true);
-//     } else {
-//         primaryNav.setAttribute('data-visible', false);
-//         navToggle.setAttribute('aria-expanded', false);
-//     }
-// });
+const primaryNav = document.querySelector('.mobile_menu');
+const navToggle = document.querySelector('.navbar-toggler');
+navToggle.addEventListener('click', () => {
+    const visibility = primaryNav.getAttribute('data-visible');
+    if (visibility === 'false') {
+        primaryNav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    } else {
+        primaryNav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
+    }
+});
+
+function adjustMenuLayout() {
+    var displayWidth = window.innerWidth;
+    var header = document.querySelector(".header");
+    var headerTop = document.querySelector(".top-menu__min");
+    var topMenu = document.querySelector(".top__menu");
+    var mainMenu = document.querySelector(".main-nav");
+    var mobileMenu = document.querySelector(".mobile_menu");
+    
+    if (displayWidth <= 768) {
+        // Move top and right menus to mobile menu
+        mobileMenu.appendChild(mainMenu);
+        mobileMenu.appendChild(topMenu);
+    } 
+    // else {
+    //     // Move top and right menus back to navbar
+    //     navbar.appendChild(topMenu);
+    //     navbar.appendChild(rightMenu);
+    // }
+}
+adjustMenuLayout();
+window.addEventListener("load", adjustMenuLayout);
+window.addEventListener("resize", adjustMenuLayout);
+window.addEventListener("orientationchange", adjustMenuLayout);
+
 // megamenu display
 const megaMenu = document.querySelector('.megamenu');
 const menuToggle = document.querySelector('.drop-menu');

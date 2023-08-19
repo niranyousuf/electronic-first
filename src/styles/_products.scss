@@ -33,6 +33,12 @@
             @include desktop-xxl {
                 max-width: 360px;
             }
+            @include desktop-lg {
+                max-width: 300px;
+            }
+            @include tablet {
+                max-width: 424px;
+            }
 
             .card-header {
                 position: relative;
@@ -42,7 +48,13 @@
                 border-radius: 3px;
 
                 @include desktop-xxl {
-                    height: 210;
+                    height: 210px;
+                }
+                @include desktop-lg {
+                    height: 210px;
+                }
+                @include tablet {
+                    height: 244px;
                 }
     
 
