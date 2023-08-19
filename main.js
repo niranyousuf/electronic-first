@@ -5,7 +5,7 @@ function adjustHeaderMargin() {
     var navbar = document.querySelector(".mainmenu");
     var mengamenu = document.querySelector(".megamenu");
 
-    if (navbar && mengamenu) {
+    if (navbar && mengamenu && window.innerWidth > 768) {
         var navbarWidth = navbar.clientWidth;
         mengamenu.style.width = navbarWidth + "px";
     }
