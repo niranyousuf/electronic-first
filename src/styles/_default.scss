@@ -8,6 +8,10 @@ html {
     background-color: $bg;
     font-family: $font-family;
 
+    &.no-scroll {
+        overflow: hidden;
+    }
+
     * {
         padding: 0;
         margin: 0;
@@ -27,6 +31,10 @@ html {
         &.active {
             z-index: 1;
             opacity: 1;
+
+            @include tablet {
+                opacity: 0;
+            }
         }
     }
 }

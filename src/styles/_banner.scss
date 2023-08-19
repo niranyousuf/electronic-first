@@ -64,6 +64,17 @@
             display: block;
             bottom: 30%;
             width: 100%;
+
+            @include mobile {
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                position: relative;
+                top: 54px;
+            }
+
             a {
                 display: inline;
                 font-size: 18px;

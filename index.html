@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
 
-    <link rel="stylesheet" href="./assets/css/fontello.css">
+    <link rel="stylesheet" href="./src/assets/css/fontello.css">
 </head>
 
 <body>
@@ -16,13 +16,25 @@
     <header id="header">
 
         <div class="header-top">
+            <!-- Burger btn and menu logo -->
+            <div class="mobile_menu" menu-visible="false">
+                <div class="mobile_menu_header">
+                    <div class="logo"><img src="./src/assets/img/logo.webp" alt="Electronic first"></div>
+                    <div id="close_menu" class="mobile_menu_btn close_menu">
+                        <span class="sr-only">Menu</span>
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </div>
+                </div>
+            </div>
 
-            <div class="mobile_menu"></div>
-
+            <!-- Default logo -->
             <a href="#" class="logo" href="#">
-                <img src="./assets/img/logo.webp" alt="Electronic first">
+                <img src="./src/assets/img/logo.webp" alt="Electronic first">
             </a>
 
+            <!-- Top Middle menu -->
             <div class="top-menu__min">
                 <ul class="top__menu">
                     <li class="active"><a href="#">Testing</a></li>
@@ -32,11 +44,14 @@
                 </ul>
             </div>
 
+            <!-- Right side icon menu -->
             <div class="right-menu">
                 <ul>
+                    <li class="search-m"><a href="#"><span class="icon icon-search"></span></a></li>
                     <li><a href="#"><span class="icon icon-basket"></span></a></li>
                     <li><a href="#"><span class="icon icon-user-o"></span></a></li>
-                    <li class="navbar-toggler" type="button" aria-controls="main_menu" aria-expanded="false">
+                    <li class="navbar-toggler mobile_menu_btn" type="button" aria-controls="main_menu"
+                        aria-expanded="false">
                         <span class="sr-only">Menu</span>
                         <span class="bar bar-1"></span>
                         <span class="bar bar-2"></span>
@@ -47,9 +62,12 @@
 
         </div>
 
+        <!-- Main Products menu and search bar -->
         <nav class="main-nav">
             <ul class="mainmenu">
-                <form action="#" class="search-form" form-visible="false">
+
+                <!-- Search form -->
+                <form action="#" class="search-form" form-visible="false" form-mobile="false">
                     <input type="text" class="search-field" placeholder="Mincraft, RPG, multiplayer...">
                     <input type="submit" placeholder="Advanced search" value="Advanced search">
                 </form>
@@ -111,15 +129,15 @@
                         </div>
                         <div class="cards-list">
                             <a href="#" class="card-block">
-                                <img src="./assets/img/steam.svg" alt="logo">
+                                <img src="./src/assets/img/steam.svg" alt="logo">
                                 <p>Stream Gift card</p>
                             </a>
                             <a href="#" class="card-block">
-                                <img src="./assets/img/amazon.svg" alt="logo">
+                                <img src="./src/assets/img/amazon.svg" alt="logo">
                                 <p>Amazon Gift card</p>
                             </a>
                             <a href="#" class="card-block">
-                                <img src="./assets/img/blizzard.svg" alt="logo">
+                                <img src="./src/assets/img/blizzard.svg" alt="logo">
                                 <p>Blizzard Gift card</p>
                             </a>
                         </div>
@@ -136,7 +154,7 @@
     </header>
 
     <!-- Hero section -->
-    <section class="banner" style="background-image: url(./assets/img/game.jpg);">
+    <section class="banner" style="background-image: url(./src/assets/img/game.jpg);">
         <div class="container">
             <div class="banner__content">
                 <p class="tag">In 15 days</p>
@@ -166,7 +184,7 @@
                 <div class="product-card">
                     <a href="#">
                         <div class="card-header">
-                            <img src="./assets/img/code.jpg" alt="Image">
+                            <img src="./src/assets/img/code.jpg" alt="Image">
                             <p class="discount"> -25%</p>
                         </div>
                     </a>
@@ -179,7 +197,7 @@
                 <div class="product-card">
                     <a href="#">
                         <div class="card-header">
-                            <img src="./assets/img/desk.png" alt="Image">
+                            <img src="./src/assets/img/desk.png" alt="Image">
                             <p class="discount"> -25%</p>
                         </div>
                     </a>
@@ -192,7 +210,7 @@
                 <div class="product-card">
                     <a href="#">
                         <div class="card-header">
-                            <img src="./assets/img/desktop.jpg" alt="Image">
+                            <img src="./src/assets/img/desktop.jpg" alt="Image">
                             <p class="discount"> -25%</p>
                         </div>
                     </a>
