@@ -4,13 +4,12 @@ import './src/styles/main.scss';
 function adjustHeaderMargin() {
     var navbar = document.querySelector(".mainmenu");
     var mengamenu = document.querySelector(".megamenu");
-    
+
     if (navbar && mengamenu) {
         var navbarWidth = navbar.clientWidth;
         mengamenu.style.width = navbarWidth + "px";
     }
 }
-
 window.addEventListener("load", adjustHeaderMargin);
 window.addEventListener("resize", adjustHeaderMargin);
 window.addEventListener("orientationchange", adjustHeaderMargin);
@@ -42,5 +41,19 @@ menuToggle.addEventListener('click', () => {
         megaMenu.setAttribute('data-visible', false);
         menuToggle.setAttribute('aria-expanded', false);
         bodyLayer.classList.remove('active')
+    }
+})
+
+const searchForm = document.querySelector('.search-form');
+const searchAlt = document.querySelector('.search-alt');
+document.addEventListener('click', (e) => {
+    const visibility = searchForm.getAttribute('form-visible');
+    if (visibility === 'false' && searchAlt.contains(e.target)) {
+        searchForm.setAttribute('form-visible', true);
+        searchForm.classList.add('show-form')
+    }
+    if (visibility === 'true' && !searchForm.contains(e.target)) {
+        searchForm.setAttribute('form-visible', false);
+        searchForm.classList.remove('show-form')
     }
 })

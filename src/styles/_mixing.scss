@@ -1,19 +1,3 @@
-@mixin overlay($color, $opacity) {
-    z-index: 1;
-    position: relative;
-
-    &:before {
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        content: "";
-        position: absolute;
-        background: rgba($color, $opacity);
-        @include transition(all 0.3s ease);
-    }
-}
 
 @mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
     position: absolute;
@@ -23,7 +7,6 @@
     left: $left;
 }
 
-$html-font-size: 16px;
 
 @mixin align-center($type: "all") {
     display: -webkit-box;
@@ -90,6 +73,12 @@ $html-font-size: 16px;
     }
 }
 
+@mixin desktop-max {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
 @mixin desktop-min {
     @media (min-width: 1024.98px) {
         @content;
@@ -118,8 +107,13 @@ $html-font-size: 16px;
         @content;
     }
 }
-@mixin desktop-xxl {
+@mixin desktop-xxl-min {
     @media (min-width: 1400.98px) {
+        @content;
+    }
+}
+@mixin desktop-xxl {
+    @media (max-width: 1400px) {
         @content;
     }
 }

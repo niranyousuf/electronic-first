@@ -97,6 +97,69 @@
                 backdrop-filter: blur(10px);
             }
 
+            form {
+                
+                position: absolute;
+                height: 100%;
+                right: 0;
+                top: 0;
+                transition: all 300ms ease;
+
+                visibility: hidden;
+                opacity: 0;
+                width: 0;
+
+                &.show-form {
+                    width: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                input {
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border: none;
+                    border: none;
+                    outline: none;
+                    border: none;
+                    &:focus-visible,
+                    &:focus {
+                        border: none;
+                        outline: none;
+                        border: none;
+                    }
+
+                    &.search-field {
+                        width: 100%;
+                        border-radius: 40px;
+                        right: 0;
+                        z-index: 9;
+                        padding: 0px 20px;
+                        box-sizing: border-box;
+                        font-size: 18px;
+                        padding-left: 32px;
+                        color: $white;
+
+                        background: linear-gradient(90deg, #ff7406 0%, #ff4c1a 100%);
+
+                        &::placeholder {
+                            color: rgba($white, 0.7);
+                        }
+
+                        // width: 0;
+                    }
+                    &[type="submit"] {
+                        color: $white;
+                        z-index: 10;
+                        background: transparent;
+                        cursor: pointer;
+                        padding-right: 32px;
+                    }
+                }
+            }
+
             li {
                 display: inline-block;
                 position: relative;
@@ -112,7 +175,7 @@
                     padding-right: 20px;
 
                     &::after {
-                        position: absolute;
+                        @include absolute;
                         content: "\f004";
                         font-family: "fontello";
                         font-size: 14px;
@@ -133,12 +196,10 @@
                     a {
                         height: 100%;
                         width: 100%;
-
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         border-radius: 50px;
                         background-color: $basic-color;
+
+                        @include align-center;
 
                         .icon {
                             font-size: 22px;
@@ -151,7 +212,6 @@
 }
 
 .drop-menu {
-    
     .megamenu {
         position: absolute;
         min-width: 580px;
